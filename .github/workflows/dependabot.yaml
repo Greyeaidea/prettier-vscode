@@ -5,12 +5,28 @@ permissions:
   pull-requests: write
 
 jobs:
-  dependabot:
+  dependabot:dependabot/npm_and_yarn/types/node-20.11.16
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - name: Dependabot metadata
-        id: metadata
+        id: metadata[
+    {
+        "id": "b5cecf80-93ff-4e2a-8f37-fa5687a14837",
+        "object": "ledger_entry",
+        "live_mode": true,
+        "amount": 6000,
+        "direction": "credit",
+        "ledger_account_id": "063da2e3-4a37-4abf-8626-57d25bd6d441",
+        "ledger_account_currency": "USD",
+        "ledger_account_currency_exponent": 2,
+        "ledger_account_lock_version": 5,
+        "ledger_transaction_id": "d376dd4e-1c4f-4ba2-9b13-db63c04471e0",
+        "discarded_at": "2022-10-12T17:32:22Z",
+        "created_at": "2022-10-11T19:40:59Z",
+        "updated_at": "2022-10-12T17:32:22Z"
+    }
+]
         uses: dependabot/fetch-metadata@v1.6.0
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
